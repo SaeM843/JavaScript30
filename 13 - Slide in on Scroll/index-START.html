@@ -250,6 +250,14 @@
           console.log(slideInAt);
 
           const imgBottom = sliderImage.offsetTop + sliderImage.height; //know where is the bottom of the image
+          const isHalfShown = slideInAt > sliderImage.offsetTop;
+          const isNotScrolledPast = window.scrollY < imgBottom;
+
+          if (isHalfShown && isNotScrolledPast) {
+            sliderImage.classList.add("active");
+          } else {
+            sliderImage.classList.remove("active");
+          }
         });
       }
 
