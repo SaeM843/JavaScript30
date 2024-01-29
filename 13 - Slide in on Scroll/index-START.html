@@ -244,9 +244,12 @@
       function checkSlide(e) {
         console.count(e);
         sliderImages.forEach((sliderImage) => {
+          //Half way through the images
           const slideInAt =
             window.scrollY + window.innerHeight - sliderImage.height / 2;
           console.log(slideInAt);
+
+          const imgBottom = sliderImage.offsetTop + sliderImage.height; //know where is the bottom of the image
         });
       }
 
