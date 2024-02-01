@@ -71,9 +71,10 @@
       const seconds = timeNodes
         .map((second) => second.dataset.time)
         .map((timeCode) => {
-          const [mins, secs] = timeCode.split(":");
-          console.log(mins, secs);
+          const [mins, secs] = timeCode.split(":").map(parseFloat);
+          return mins * 60 + secs;
         });
+      console.log(seconds);
     </script>
   </body>
 </html>
