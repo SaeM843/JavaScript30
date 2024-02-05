@@ -55,7 +55,11 @@
       document.body.append(highlight);
 
       function highlightLink() {
-        console.log("Highlight");
+        const linkCords = this.getBoundingClientRect();
+        highlight.style.width = `${linkCords.width}px`;
+        highlight.style.height = `${linkCords.height}px`;
+        highlight.style.transform = `translate(${linkCords.left}px, ${linkCords.top}px)`;
+        //console.log(linkCords);
       }
 
       triggers.forEach((a) => {
