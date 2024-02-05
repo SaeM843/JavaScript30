@@ -28,4 +28,11 @@ function paintToCanvas() {
   }, 16);
 }
 
+//paintToCanvas();
+
+function takePhoto() {
+  snap.currentTime = 0;
+  snap.play();
+}
+
 getVideo();
