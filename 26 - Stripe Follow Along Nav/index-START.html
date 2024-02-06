@@ -280,9 +280,17 @@
         const coords = {
           width: dropdownCoords.width,
           height: dropdownCoords.height,
+          top: dropdownCoords.top - navCoords.top,
+          left: dropdownCoords.left - navCoords.left,
         };
         dropdownBackground.style.setProperty("width", `${coords.width}px`);
         dropdownBackground.style.setProperty("height", `${coords.height}px`);
+
+        dropdownBackground.style.setProperty(
+          "transform",
+          `translate(${coords.left}px,
+          ${coords.top}px)`
+        );
       }
       function handleLeave() {
         //console.log("leave");
