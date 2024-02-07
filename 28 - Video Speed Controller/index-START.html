@@ -33,8 +33,9 @@
         const max = 4;
         const height = Math.round(percent * 100) + "%";
         bar.style.height = height;
-        const pleybackRate = percent * (max - min) + min;
-        bar.textContent = pleybackRate.toFixed(2) + "x";
+        const playbackRate = percent * (max - min) + min;
+        bar.textContent = playbackRate.toFixed(2) + "x";
+        video.playbackRate = playbackRate;
         console.log(height);
       });
     </script>
